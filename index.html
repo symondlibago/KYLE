@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">KYLE RHODGE</a>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="itiii-blog.html">ITIII Blog Entries</a>
+            <a href="flex-page.html">Flex Page</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home">
+        <div class="home-img">
+            <img src="kyle.jpg" alt="Kyle Rhodge">
+        </div>
+        <div class="home-content">
+            <h1>Hi, I'm <span>Kyle Rhodge</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus labore dolores esse. Odit similique doloribus tenetur doloremque, sunt commodi in ipsa repudiandae debitis deleniti blanditiis quibusdam quaerat neque asperiores ea.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/kyle.sabio.359"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <a href="#about-me" class="btn">More About Me</a> <!-- Updated button -->
+        </div>
+    </section>
+
+    <!-- Self Introduction Section (Scroll to this when clicking 'More About Me') -->
+    <section id="about-me" class="about-me">
+        <h2>More About Me</h2>
+        <div class="intro-content">
+            <div class="bio">
+                <p><strong>Name:</strong> Kyle Rhodge Sabio</p>
+                <p><strong>Location:</strong> Little Baguio, Bukidnon</p>
+                <p><strong>Age:</strong> 19 years old</p>
+            </div>
+            <div class="infographic">
+                <div class="hobbies">
+                    <h3>My Hobbies</h3>
+                    <ul>
+                        <li>Gaming</li>
+                        <li>Traveling</li>
+                        <li>Video Editing</li>
+                        <li>Reading</li>
+                    </ul>
+                </div>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>Web Development</li>
+                        <li>Graphic Design</li>
+                        <li>Content Creation</li>
+                        <li>Project Management</li>
+                    </ul>
+                </div>
+                <div class="future">
+                    <h3>8 Years From Now</h3>
+                    <p>In 8 years, I see myself as a successful tech entrepreneur, managing my own company that specializes in innovative web solutions and creative digital content. I plan to be an industry leader with a team that values creativity, innovation, and sustainability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kyle Rhodge. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth Scroll for "More About Me" Button
+        document.querySelector('.btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#about-me').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+
+</body>
+</html>
