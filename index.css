@@ -444,3 +444,16 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+.video-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container video {
+    border: 2px solid #b74b4b;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(183, 75, 75, 0.5);
+}
