@@ -18,72 +18,80 @@ body{
     background-color: black;
     color: white;
 }
-header{
-    margin-top: 20px;
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 9%;
-    background-color: transparent;
-    filter: drop-shadow(10px);
+    padding: 1rem 5%;
+    background-color: rgba(0, 0, 0, 0.9); /* Slight transparency */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 1000;
 }
-.logo{
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
     font-size: 3rem;
     color: #b74b4b;
     font-weight: 800;
     cursor: pointer;
     transition: 0.5s ease;
 }
-.logo:hover{
+
+.logo:hover {
     transform: scale(1.1);
 }
-nav a{
-    font-size: 1.8rem;
+
+nav a {
+    font-size: 1.6rem;
     color: white;
-    margin-left: 4rem;
+    margin-left: 2rem;
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
 }
+
 nav a:hover,
-nav a.active{
+nav a.active {
     color: #b74b4b;
     border-bottom: 3px solid #b74b4b;
 }
-@media(max-width:995px){
-    nav{
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 3%;
+    }
+
+    nav {
+        display: none; /* Hide nav initially on small screens */
         position: absolute;
-        display: none;
-        top: 0;
+        top: 100%;
         right: 0;
-        width: 40%;
-        border-left: 3px solid #b74b4b;
-        border-bottom: 3px solid #b74b4b;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
         background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        border: 1px solid #b74b4b;
+        width: 60%;
+        flex-direction: column;
+        padding: 1.5rem;
+        border-radius: 8px;
     }
-    nav.active{
+
+    nav.active {
+        display: flex; /* Show nav when active */
+    }
+
+    nav a {
         display: block;
-    }
-    nav a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-    nav a:hover,
-    nav a.active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #b74b4b;
+        margin: 1rem 0;
+        text-align: center;
     }
 }
+
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
